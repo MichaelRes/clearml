@@ -53,7 +53,7 @@ class WalkForwardCommand:
         global_backtest_metrics_mean = self.evaluator.evaluate_and_plot_rolling_window_all_locations(output_folder)
         return global_backtest_metrics_mean
 
-    def plot_results(self, avg_metrics_by_perilod):
+    def plot_results(self, avg_metrics_by_period):
         x = self.start_dates
         for metric_idx in range(len(self.evaluator.metrics)):
             y = avg_metrics_by_period[:, metric_idx]
