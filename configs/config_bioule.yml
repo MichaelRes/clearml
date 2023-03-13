@@ -1,0 +1,17 @@
+values: !import values.yml
+models_inputs: !import models_inputs.yml
+logging: !import logging.yml
+
+locations: ['bioule']
+
+eval_last_period:
+  (): src.commands.walk_forward_command.WalkForwardCommand
+  evaluator:
+    (): src.evaluators.walk_forward_evaluator.WalkForwardEvaluator
+    model_input: cfg://models_inputs.bioule
+    dataloader: cfg://values.local_dataloader
+    backtest_inputs: cfg://values.backtest_inputs
+    locations: cfg://locations
+  result_folder: cfg://values.local_results_path
+  start_dates: cfg://values.start_date
+  save_model: false
