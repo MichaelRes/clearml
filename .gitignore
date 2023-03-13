@@ -151,4 +151,4 @@ groundwater_prediction_dataset/
 results/
 figures/
 src/commands/__pycache__/
-*.pyc
+*.cpython-38.pyc
