@@ -79,7 +79,7 @@ class WalkForwardCommand:
                                                     'model.pkl'))
 
     def init_task(self):
-        Task.add_requirements('../../requirements.txt')
+        Task.add_requirements('src/requirements.txt')
         task = Task.init(project_name='BRGM', task_name='walk forward command',
                          reuse_last_task_id=False)
         task.connect({
