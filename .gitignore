@@ -150,6 +150,7 @@ models/
 groundwater_prediction_dataset/
 results/
 figures/
+*/*/*/*/__pycache__/
 */*/*/__pycache__/
 */*/__pycache__/
 */__pycache__/

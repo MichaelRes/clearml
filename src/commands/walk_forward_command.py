@@ -79,8 +79,9 @@ class WalkForwardCommand:
                                                     'model.pkl'))
 
     def init_task(self):
-        task = Task.init(project_name='BRGM', task_name='walk forward command')
+        Task.add_requirements('../requirements.txt')
+        task = Task.init(project_name='BRGM', task_name='walk forward command',
+                         reuse_last_task_id=False)
         task.connect({
-            'features': self.evaluator.features,
-            'backtest_inputs': self.evaluator.backtest_inputs
+            'features': self.evaluator.features
         })
