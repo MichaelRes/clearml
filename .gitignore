@@ -157,3 +157,4 @@ figures/
 __pycache__/
 
 *.pyc
+src/commands/__pycache__/walk_forward_command.cpython-38.pyc
